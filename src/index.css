@@ -1,0 +1,280 @@
+/* ============================================
+   BELLE SUN HAVANESE — Global Styles
+   ============================================ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+/* ── Color Palette ── */
+:root {
+  --white:        #ffffff;
+  --off-white:    #f9f7f4;
+  --linen:        #eae6dd;
+  --text-dark:    #2d2d2a;
+  --text-mid:     #5a5a56;
+  --teal:         #7bb5b2;
+  --teal-light:   #b2d4d2;
+  --gold:         #edd286;
+  --gold-deep:    #d4a83a;
+  --blue:         #34649b;
+  --blue-light:   #4a7db8;
+  --blue-dark:    #1e3f66;
+  --shadow:       rgba(45, 45, 42, 0.12);
+  --shadow-md:    rgba(45, 45, 42, 0.2);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text-dark);
+  background: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.3;
+}
+
+a { color: var(--blue); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--blue-light); }
+
+img { max-width: 100%; display: block; }
+
+/* ── Utility ── */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 5rem 0; }
+.section-sm { padding: 3rem 0; }
+.text-center { text-align: center; }
+.text-blue { color: var(--blue); }
+.text-gold { color: var(--gold-deep); }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.8rem;
+  border-radius: 50px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+}
+.btn-primary:hover {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 100, 155, 0.35);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--text-dark);
+  border-color: var(--gold);
+}
+.btn-gold:hover {
+  background: var(--gold-deep);
+  border-color: var(--gold-deep);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 168, 58, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--blue);
+  border-color: var(--blue);
+}
+.btn-outline:hover {
+  background: var(--blue);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ── Section Labels ── */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 0.6rem;
+}
+
+/* ── Cards ── */
+.card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px var(--shadow-md);
+}
+
+/* ── Paw Print Decorations (CSS-only) ── */
+.paw-deco {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.07;
+  font-size: 4rem;
+  animation: float 6s ease-in-out infinite;
+  user-select: none;
+}
+.paw-deco.delay-1 { animation-delay: -2s; }
+.paw-deco.delay-2 { animation-delay: -4s; }
+.paw-deco.delay-3 { animation-delay: -1s; }
+.paw-deco.delay-4 { animation-delay: -3s; }
+
+/* ── Animations ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-10deg); }
+  50%       { transform: translateY(-18px) rotate(8deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pawWalk {
+  0%   { transform: translateX(-120%) rotate(-15deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateX(120vw) rotate(15deg); opacity: 0; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes tailWag {
+  0%, 100% { transform: rotate(-5deg); }
+  50%       { transform: rotate(5deg); }
+}
+
+/* ── Scroll-triggered Animations ── */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll.delay-100 { transition-delay: 0.1s; }
+.animate-on-scroll.delay-200 { transition-delay: 0.2s; }
+.animate-on-scroll.delay-300 { transition-delay: 0.3s; }
+.animate-on-scroll.delay-400 { transition-delay: 0.4s; }
+.animate-on-scroll.delay-500 { transition-delay: 0.5s; }
+
+/* ── Section Dividers ── */
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-divider svg { display: block; width: 100%; }
+
+/* ── Badge ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.badge-gold { background: var(--gold); color: var(--text-dark); }
+.badge-blue { background: var(--blue); color: var(--white); }
+.badge-teal { background: var(--teal-light); color: var(--blue-dark); }
+
+/* ── Pill Divider ── */
+.pill-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.pill-divider::before,
+.pill-divider::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--linen);
+  border-radius: 2px;
+}
+
+/* ── Hero gradient overlays ── */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 100, 155, 0.7) 0%,
+    rgba(30, 63, 102, 0.5) 50%,
+    rgba(45, 45, 42, 0.3) 100%
+  );
+}
+
+/* ── Responsive helpers ── */
+@media (max-width: 768px) {
+  .container { padding: 0 1.2rem; }
+  .section { padding: 3.5rem 0; }
+  h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  h2 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+}

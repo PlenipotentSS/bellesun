@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.bellesunhavanese.com)",
+      "Bash(curl -s \"https://www.bellesunhavanese.com/\")",
+      "Bash(curl -sL \"https://images.squarespace-cdn.com/content/v1/68755a9048620c20eb93bba6/9a4c7a36-d0df-468d-be9d-62c9a1366bac/BelleSunLogo-wide.png\" -o public/images/logo.png)",
+      "Bash(curl -sL \"https://images.squarespace-cdn.com/content/v1/68755a9048620c20eb93bba6/8570035c-c123-42bc-a680-026b8040a755/IMG_0054.jpeg\" -o public/images/hero1.jpg)",
+      "Bash(curl -sL \"https://images.squarespace-cdn.com/content/v1/68755a9048620c20eb93bba6/4d6eeccb-b879-438c-bc4d-fca067aa8222/IMG_0057.jpeg\" -o public/images/hero2.jpg)",
+      "Bash(curl -sL \"https://images.squarespace-cdn.com/content/v1/68755a9048620c20eb93bba6/3de15f69-3652-4cdf-aedf-9c8ecb612cf5/momportrait.jpg\" -o public/images/anne.jpg)",
+      "Bash(curl -sL \"https://images.squarespace-cdn.com/content/v1/68755a9048620c20eb93bba6/a11eb46d-06c3-40b6-9efe-6d69c8142a3a/DSC01328.jpg\" -o public/images/whyus-hero.jpg)",
+      "Bash(curl -s http://localhost:5175/)"
+    ]
+  }
+}
